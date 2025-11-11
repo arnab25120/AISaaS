@@ -174,7 +174,7 @@ export const removeImageBackground = async (req, res) => {
       });
     }
 
-    // 4) Upload to Cloudinary
+    // Upload to Cloudinary with background removal
     const { secure_url } = await cloudinary.uploader.upload(image.path, {
       transformation: [
         {
@@ -184,9 +184,11 @@ export const removeImageBackground = async (req, res) => {
       ],
     });
 
-    await sql `INSERT INTO creations (user_id,prompt,content,type) VALUES (${userId},'Remove background from image,${secure_url},'image') `
-
-    
+    // ✅ Fixed SQL query
+    await sql`
+      INSERT INTO creations (user_id, prompt, content, type)
+      VALUES (${userId}, ${'Remove background from image'}, ${secure_url}, 'image')
+    `;
 
     res.json({ success: true, content: secure_url });
   } catch (err) {

@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div className='fixed x-5 w-full backdrop-blur-2xl flex justify-between items-center py-5 px-4 sm:px-20 xl:px-32 '>
 
-      <img src={assets.logo} alt="logo" className='w-32 sm:w-44 cursor-pointer '  onClick={()=>navigate('/')} />
+      <img src={assets.coollogo} alt="logo" className='w-32 sm:w-44 cursor-pointer '  onClick={()=>navigate('/')} />
 
         {user ? <UserButton/>
         :(

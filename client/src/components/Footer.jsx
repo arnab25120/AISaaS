@@ -5,9 +5,9 @@ export default function Footer() {
         <footer className="px-6 md:px-16 lg:px-24 xl:px-32 pt-8 w-full text-gray-500 mt-20">
             <div className="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-500/30 pb-6">
                 <div className="md:max-w-96">
-                    <img className="h-9" src={assets.logo} alt="logo" />
+                    <img className="h-9" src={assets.coollogo} alt="logo" />
                     <p className="mt-6 text-sm">
-                       Experience the Power of AI with Quick.AI <br /> Transform your content creation with our suite of premium AI Tools. Write article, generate images, and enhance your workflow
+                       Experience the Power of AI with CoolAI <br /> Transform your content creation with our suite of premium AI Tools. Write article, generate images, and enhance your workflow
                     </p>
                 </div>
                 <div className="flex-1 flex items-start md:justify-end gap-20">
@@ -33,7 +33,7 @@ export default function Footer() {
                 </div>
             </div>
             <p className="pt-4 text-center text-xs md:text-sm pb-5">
-                Copyright 2025 © QuickAI All Right Reserved.
+                Copyright 2025 © CoolAI All Right Reserved.
             </p>
         </footer>
     );
