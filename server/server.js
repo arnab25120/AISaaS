@@ -11,9 +11,15 @@ const app=express()
 
 await connectCloudinary()
 
-const cors = require('cors');
-app.use(cors({ origin: 'https://ai-saa-s-ten.vercel.app', credentials: true }));
-
+app.use(cors({
+  origin: [
+    "https://ai-saa-s-ten.vercel.app",  // your frontend deployed on Vercel
+    "http://localhost:5173"             // for local development (optional)
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true, // only if you use cookies or Clerk JWT
+}));
 app.use(express.json())
 
 app.use(clerkMiddleware())
