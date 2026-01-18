@@ -129,5 +129,5 @@ Clerk · PostgreSQL (Neon) · Cloudinary
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/your-username/cool-ai.git
-cd cool-ai
+git clone https://github.com/arnab25120/AISaaS.git
+
