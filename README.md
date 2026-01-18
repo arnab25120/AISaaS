@@ -1,9 +1,9 @@
 <div align="center">
 
 # 🤖 Cool AI  
-### AI-Powered SaaS Platform for Modern Content Creation  
+### AI-Powered SaaS Platform for Content & Creativity  
 
-**Full-Stack Engineering • Scalable APIs • AI Integration • Production-Ready Design**
+**Full-Stack SaaS • Secure Auth • AI APIs • Scalable Backend**
 
 </div>
 
@@ -11,7 +11,7 @@
 
 <div align="center">
 
-A unified AI SaaS platform that enables content creation, image generation, and intelligent resume analysis — built with real-world software engineering principles.
+A modern AI-powered SaaS platform that enables users to generate content, create images, and analyze resumes — built with production-ready engineering practices.
 
 </div>
 
@@ -19,75 +19,85 @@ A unified AI SaaS platform that enables content creation, image generation, and 
 
 ## 📌 Introduction
 
-**Cool AI** is a full-stack, AI-powered SaaS application that brings together multiple AI-driven tools into a single, cohesive system.  
-The project is designed to reflect **how production SaaS platforms are engineered**, with emphasis on scalability, maintainability, and clean system design.
+**Cool AI** is a full-stack AI SaaS application designed to showcase **real-world software engineering**, not just AI prompts.  
+It integrates multiple AI-powered tools into a single platform while emphasizing **clean architecture, scalability, security, and user experience**.
 
-Rather than focusing on isolated features, Cool AI demonstrates **end-to-end system ownership** — from frontend user experience to backend APIs and persistent data storage.
+The project demonstrates end-to-end ownership — from frontend UI and authentication to backend APIs, database design, and third-party service integration.
 
 ---
 
-## 🎯 Project Goals
+## 🎯 Project Objectives
 
-- Build a real-world AI SaaS platform, not a demo application  
-- Apply backend and database engineering best practices  
-- Design scalable APIs that integrate external AI services  
-- Deliver a smooth, responsive, and intuitive frontend experience  
-- Follow clean architecture and separation of concerns  
+- Build a **production-style SaaS application**
+- Integrate multiple AI services in a scalable backend
+- Implement secure authentication and protected routes
+- Design persistent storage for generated assets
+- Deliver a smooth, responsive, and intuitive UI
+- Follow clean separation of concerns across layers
 
 ---
 
 ## ✨ Core Features
 
 ### 🧠 AI Content Generation
-- Article and long-form content generation  
+- Long-form article generation  
 - Blog title and idea generation  
-- Resume review with structured and actionable AI feedback  
+- Markdown-rendered AI responses  
+
+### 📄 AI Resume Review
+- Upload resumes in PDF format  
+- Extract text using server-side parsing  
+- Generate structured AI feedback and insights  
 
 ### 🖼️ AI Image Generation
-- Prompt-based AI image creation using third-party APIs  
-- Image asset storage with metadata management  
-- Publish and unpublish control for generated content  
+- Prompt-based AI image creation  
+- Image upload and hosting via Cloudinary  
+- Save and manage generated images  
 
-### 🌍 Community Gallery & Engagement
-- Public gallery for AI-generated images  
+### 🌍 Community Gallery
+- Public gallery for published AI-generated images  
 - Like system with real-time UI feedback  
-- Content sharing and visibility control  
+- Publish / unpublish content control  
 
-### 🔐 User-Centric SaaS Experience
-- Persistent user data and generated assets  
-- Saved content across sessions  
-- Seamless navigation between tools  
+### 🔐 Authentication & User Management
+- Secure authentication using Clerk  
+- Protected routes and user-specific content  
+- Persistent user sessions  
 
 ---
 
 ## 🏗️ System Architecture
 
-The application follows a clear separation of concerns:
+### Frontend (Client)
+- Built with **React** and **React Router**
+- Component-driven UI architecture
+- Real-time notifications using React Hot Toast
+- Markdown rendering for AI responses
+- Clean UX with modern iconography
 
-- **Frontend Layer**  
-  - Component-based UI using React  
-  - Client-side routing for smooth multi-tool navigation  
-  - Instant UI feedback without full page reloads  
+### Backend (Server)
+- RESTful APIs built using **Node.js & Express**
+- Stateless service architecture
+- Secure middleware-based request handling
+- AI orchestration using OpenAI SDK
+- File handling and uploads using Multer
 
-- **Backend Layer**  
-  - RESTful APIs built with Node.js and Express.js  
-  - Stateless service design suitable for cloud deployment  
-  - Secure handling of AI service requests and responses  
-
-- **Data Layer**  
-  - PostgreSQL (Neon) for relational data storage  
-  - Optimized schemas for users, generated content, and assets  
-  - Query structures designed for scalability  
+### Data & Storage
+- **PostgreSQL (Neon)** for persistent relational storage
+- Optimized schema for users, content, and assets
+- Cloudinary for scalable image storage
+- Server-side PDF parsing for resume analysis
 
 ---
 
-## 🔁 Data Flow Overview
+## 🔁 High-Level Data Flow
 
-1. User interacts with a frontend tool (content, image, or resume feature)  
+1. User authenticates via Clerk  
 2. Frontend sends request to backend API  
-3. Backend processes request and integrates with AI services  
-4. Generated results are stored in PostgreSQL  
-5. Frontend receives response and updates UI in real time  
+3. Backend validates user and request  
+4. AI service is invoked (OpenAI / Image API)  
+5. Generated output is stored in PostgreSQL / Cloudinary  
+6. Frontend updates UI with real-time feedback  
 
 ---
 
@@ -96,16 +106,13 @@ The application follows a clear separation of concerns:
 <div align="center">
 
 **Frontend**  
-React · React Router · React Hot Toast  
+React · React Router · React Hot Toast · React Markdown · Lucide Icons  
 
 **Backend**  
-Node.js · Express.js  
+Node.js · Express.js · OpenAI SDK · Multer · PDF-Parse  
 
-**AI & External Services**  
-OpenAI API · ClipDrop API  
-
-**Database**  
-PostgreSQL (Neon)  
+**Auth & Storage**  
+Clerk · PostgreSQL (Neon) · Cloudinary  
 
 </div>
 
@@ -113,12 +120,14 @@ PostgreSQL (Neon)
 
 ## 🛠️ Local Development Setup
 
+### Prerequisites
+- Node.js (v18+ recommended)
+- PostgreSQL database (Neon)
+- Clerk, OpenAI & Cloudinary accounts
+
+---
+
+### Clone the Repository
 ```bash
-# Clone the repository
-git clone https://github.com/arnab25120/AISaaS.git
-
-# Install dependencies
-npm install
-
-# Start the development environment
-npm run dev
+git clone https://github.com/your-username/cool-ai.git
+cd cool-ai
